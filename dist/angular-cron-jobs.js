@@ -382,7 +382,7 @@ angular.module('angular-cron-jobs')
         }
 
         if (n && n.base && n.base >= baseFrequency.month) {
-            cron[2] = typeof n.dayOfMonthValues !== "undefined" ? n.dayOfMonthValues : "*";
+            cron[2] = typeof n.dayOfMonthValues !== "undefined" ? n.dayOfMonthValues : n.dayValues ? 1 : "*";
         }
 
         if (n && n.base && n.base === baseFrequency.year) {
